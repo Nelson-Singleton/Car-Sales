@@ -16,15 +16,18 @@ export const initialState = {
           ] 
 
     }
-
-    export const Reducer = (state = initialState, action) => {
+//set default parameter
+    export const reducer = (state = initialState, action) => {
         switch (action.type) {
-            case ADD_FEATURE: {
+            case "ADD_FEATURE": {
                 return{}
             }
 
-            case REMOVE_FEATURE: {
+            case "REMOVE_FEATURE": {
                 return{}
             }
+
+            default:
+                return state
         }
     }
