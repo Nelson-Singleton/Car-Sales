@@ -33,7 +33,19 @@ export const initialState = {
             }
 
             case "REMOVE_FEATURE": {
-                return{}
+                return{
+                    ...state,
+                    //additionalPrice
+                        car: {
+                            ...state.car,
+                            //price: state.car.price - action.payload.price,
+                            features: [
+                                ...state.car.features.filter((someFeature) => 
+                                someFeature.id === action.payload.id
+                                
+                            )]
+                        }
+                }
             }
 
             default:
