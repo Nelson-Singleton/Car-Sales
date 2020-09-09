@@ -19,8 +19,17 @@ export const initialState = {
 //set default parameter
     export const reducer = (state = initialState, action) => {
         switch (action.type) {
+
             case "ADD_FEATURE": {
-                return{}
+                return{
+                    ...state,
+                        car: {
+                            ...state.car,
+                            price: action.payload.price + state.car.price,
+                            features: [...state.car.features, action.payload]
+                        }
+
+                }
             }
 
             case "REMOVE_FEATURE": {
