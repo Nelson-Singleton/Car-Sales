@@ -48,5 +48,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {}) //action creators
+  {}) //action
   (App);

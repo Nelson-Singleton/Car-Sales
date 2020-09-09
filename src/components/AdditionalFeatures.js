@@ -29,14 +29,14 @@ const AdditionalFeatures = props => {
 //function is abstracted out of the connect call via mapStateToProps
 //object passed into connect needs action creators that are called into the component.
 
-// const mapStateToProps = state => { 
-//   return { 
-//     additionalFeatures: state.AdditionalFeatures 
-//   }} 
+const mapStateToProps = state => { 
+  return { 
+    //additionalFeatures: state.AdditionalFeatures, 
+  }} 
 
-// export default connect(
-//   mapStateToProps,
-//   {}
-//   ) (AdditionalFeatures);
+export default connect(
+  mapStateToProps,
+  {}
+  ) (AdditionalFeatures);
 
-  export default AdditionalFeatures
+  //export default AdditionalFeatures
